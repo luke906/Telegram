@@ -1,4 +1,4 @@
-import os
+
 import telegram
 
 bot = telegram.Bot(token='453642591:AAFwBdO7CaZ4XpfYi1ud3b6nURjYisHgs-s')
