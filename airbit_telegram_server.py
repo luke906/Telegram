@@ -13,7 +13,7 @@ def help(bot, update):
 
 def iam(bot, update):
     chat_id = update.message.chat_id
-    msg = "my chat_is is %d" % (chat_id)
+    msg = "my chat_id is %d" % (chat_id)
     bot.sendMessage(update.message.chat_id, text=msg)
 
 def start(bot, update):
@@ -32,6 +32,7 @@ def response(bot, update):
 
     r_msg = query(update.message.text)
     bot.sendMessage(chat_id, text=r_msg)
+    bot.sendMessage(chat_id, text=user_name)
 
 def error(bot, update, error):
     logger.warn('Update "%s" caused error "%s"' % (update, error))
