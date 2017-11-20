@@ -1,5 +1,6 @@
 
 import telegram
+import telegram_send
 
 bot = telegram.Bot(token='453642591:AAFwBdO7CaZ4XpfYi1ud3b6nURjYisHgs-s')
 
@@ -9,8 +10,11 @@ for u in updates:
     # 내역중 메세지를 출력합니다.
     print(u.message)
 
-chat_id = bot.getUpdates()[-1].message.chat.id
+# chat_id = bot.getUpdates()[-1].message.chat.id
 
 
 bot.sendMessage(chat_id='468017156', text='News COMMING!!')
+bot.send_photo(chat_id='468017156', photo=open('face-input.jpg', 'rb'))
+
+
 
