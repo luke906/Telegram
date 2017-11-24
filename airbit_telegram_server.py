@@ -36,11 +36,11 @@ def remove_custom_keyboard(bot, update):
 
 def start(bot, update):
 
-    kb = [[telegram.KeyboardButton('command1')],
-          [telegram.KeyboardButton('/command2')],
+    kb = [[telegram.KeyboardButton('전체 계좌 금액 합산')],
+          [telegram.KeyboardButton('전체 계좌 이체 실행')],
           [telegram.KeyboardButton('command3')],
-          [telegram.KeyboardButton('/command4')],
-          [telegram.KeyboardButton('/command5')]]
+          [telegram.KeyboardButton('command4')],
+          [telegram.KeyboardButton('command5')]]
     kb_markup = telegram.ReplyKeyboardMarkup(kb)
 
     user = update.message.from_user
@@ -61,7 +61,7 @@ def response(bot, update):
     bot.sendMessage(chat_id, text=user_name)
 
 def error(update, error):
-    logger.warn('Update "%s" caused error "%s"' % (update, error))
+    logger.warning('Update "%s" caused error "%s"' % (update, error))
 
 def main():
 
