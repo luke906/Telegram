@@ -59,6 +59,7 @@ def response(bot, update):
     r_msg = query(update.message.text)
     bot.sendMessage(chat_id, text=r_msg)
     bot.sendMessage(chat_id, text=user_name)
+    bot.sendMessage(chat_id, text=chat_id)
 
 def error(update, error):
     logger.warning('Update "%s" caused error "%s"' % (update, error))
